@@ -34,10 +34,10 @@ export class index extends Component {
       axios({
             method: 'GET',
             url: 'https://glacial-hamlet-02663.herokuapp.com/search_phone_number/',
-            mode: 'no-cors',
-            headers: {
-              'Access-Control-Allow-Origin': '*'
-            },
+            // mode: 'no-cors',
+            // headers: {
+            //   'Access-Control-Allow-Origin': '*'
+            // },
             params: {
               text:this.state.input_text
             }
