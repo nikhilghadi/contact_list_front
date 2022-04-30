@@ -36,3 +36,151 @@
     transform: rotate(360deg);
   }
 }
+@import "./mat_icons.css";
+
+.input_number {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+
+.cardbox {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 30%;
+  margin-left: 33%;
+}
+
+.key{
+  background-color: #142014; /* Green */
+  border: none;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 23px;
+  margin: 0px 17px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.backspace{
+  padding: 12px 20px;
+  margin: 8px 0;
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.firstLetter{
+  width: 10%;
+    border-radius: 50%;
+    background: orangered;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding: 7px 3px 10px 2px;
+    font-size: 21px;
+    cursor: pointer;
+    height: 10%;
+}
+
+.addToContact{
+  width: 10%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0px 3px 10px 2px;
+    font-size: 21px;
+    cursor: pointer;
+    height: 10%;
+}
+
+.saveButton{
+
+  background-color: #4c4c49; /* Green */
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 11%;
+  width: 43%;
+
+}
+
+.container {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.container::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+@media screen and (min-width: 750px) and (max-width:950px) {
+
+  .cardbox {
+    width: 40%;
+    margin-left: 33%;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width:750px) {
+
+  .cardbox {
+    width: 47%;
+    margin-left: 26%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width:750px) {
+
+  .cardbox {
+    width: 47%;
+    margin-left: 26%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width:600px) {
+
+  .cardbox {
+    width: 70%;
+    margin-left: 12%;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width:500px) {
+
+  .cardbox {
+    width: 80%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width:400px) {
+
+  .cardbox {
+    width: 90%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width:300px) {
+
+  .cardbox {
+    width: 90%;
+    margin-left: 0%;
+  }
+}
