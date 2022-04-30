@@ -20,7 +20,7 @@ export class index extends Component {
 
     checkList=()=>{
       const {contact_list} = this.state
-      if(contact_list.length == 0){
+      if(contact_list.length === 0){
         this.setState({create_new_constact:true})
       }
     }
@@ -54,7 +54,7 @@ export class index extends Component {
     }
     setValue=(value)=>{
       const {input_text} = this.state
-      if(value == '#')
+      if(value === '#')
       {
         let position = this.ref.selectionStart
        let new_text =  input_text.substring(0, position - 1) + input_text.substring(position, input_text.length);
@@ -103,7 +103,7 @@ export class index extends Component {
             </div>
 
             {
-          create_new_constact && !show_form && contact_list.length ==0?
+          create_new_constact && !show_form && contact_list.length === 0?
             <div style={{display:'flex',marginBottom:9,cursor:'pointer'}} onClick={this.addNewContact}>
               <div className='addToContact'>
               <span class="material-icons">contact_phone</span>
