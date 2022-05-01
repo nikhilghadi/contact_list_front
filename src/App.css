@@ -61,14 +61,16 @@
   background-color: #142014; /* Green */
   border: none;
   color: white;
-  padding: 12px;
+  padding: 9px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 23px;
-  margin: 0px 17px;
+  display: inline-grid;
+  font-size: 19px;
+  margin: -1px 20px;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 10px;
+  height: 50px;
+  width: 43px;
 }
 
 .backspace{
@@ -121,6 +123,9 @@
 
 }
 
+small{
+  font-size: 10px;
+}
 .container {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
