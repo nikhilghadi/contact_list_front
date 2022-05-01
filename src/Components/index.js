@@ -31,24 +31,29 @@ export class index extends Component {
     }
 
     search_contact=()=>{
-      axios({
-            method: 'GET',
-            url: 'https://glacial-hamlet-02663.herokuapp.com/search_phone_number/',
-            // mode: 'no-cors',
-            // headers: {
-            //   'Access-Control-Allow-Origin': '*',
-            //   "Access-Control-Allow-Headers": "X-Requested-With"  
-            // },
-            params: {
-              text:this.state.input_text
-            }
-          }).then((res)=>{
-              console.log("REsponce",res.data)
 
-              this.setState({contact_list:res.data},this.checkList)
-          }).catch((err)=>{
-              console.log("Error",err)
-          });
+      if(this.state.input_text){
+        axios({
+          method: 'GET',
+          url: 'https://glacial-hamlet-02663.herokuapp.com/search_phone_number/',
+          // url: 'http://localhost:3000/search_phone_number/',
+          // mode: 'no-cors',
+          // headers: {
+          //   'Access-Control-Allow-Origin': '*',
+          //   "Access-Control-Allow-Headers": "X-Requested-With"  
+          // },
+          params: {
+            text:this.state.input_text
+          }
+        }).then((res)=>{
+            console.log("REsponce",res.data)
+
+            this.setState({contact_list:res.data},this.checkList)
+        }).catch((err)=>{
+            console.log("Error",err)
+        });
+      }
+      
     }
     showDetails=(contact_datails)=>{
 
@@ -88,17 +93,17 @@ export class index extends Component {
             <div className='container' style={{overflow:'scroll',height:contact_list.length?177:0}}>
             {
             contact_list.map((contact,index)=>{
-              return contact.numbers.map((number,j)=>{
+              return contact&&contact.numbers.map((number,j)=>{
               return <div  style={{display:'flex',marginBottom:9}} onClick={()=>this.showDetails(contact)}>
                 <div className='firstLetter'>
-                  {contact.contact_name[0]}
+                  {contact&&contact.contact_name[0]}
                 </div>
                 <div style={{marginLeft:20,cursor:'pointer'}}>
                   <div style={{float:'left'}}>
-                  {contact.contact_name}
+                  {contact&&contact.contact_name}
                   </div>
                   <div >
-                  {number.phone_number}
+                  {number&&number.phone_number}
                   </div>
                 </div>
                 </div>
