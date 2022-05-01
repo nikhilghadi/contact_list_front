@@ -87,7 +87,7 @@ export class index extends Component {
           :
 
           show_form?
-            <Form goBack={()=>this.setState({show_form:false,create_new_constact:false,contact_list:[]})} text={input_text}/>
+            <Form goBack={()=>this.setState({show_form:false,create_new_constact:false,contact_list:[],input_text:''})} text={input_text}/>
           :
           <div className='cardbox'>
             <div className='container' style={{overflow:'scroll',height:contact_list.length?177:0}}>
@@ -113,7 +113,7 @@ export class index extends Component {
             </div>
 
             {
-          create_new_constact && !show_form && contact_list.length === 0?
+          create_new_constact && !show_form ?
             <div style={{display:'flex',marginBottom:9,cursor:'pointer'}} onClick={this.addNewContact}>
               <div className='addToContact'>
               <span class="material-icons">contact_phone</span>
