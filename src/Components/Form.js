@@ -22,6 +22,12 @@ export class Form extends Component {
         axios({
             method: 'POST',
             url: 'https://glacial-hamlet-02663.herokuapp.com/add_new_contact/',
+            // url: 'http://localhost:3000/add_new_contact/',
+             headers: {
+                  'Access-Control-Allow-Origin': '*',
+                  "Access-Control-Allow-Headers": "X-Requested-With",
+                  "Content-Type":"application/json;charset=UTF-8"  
+                },
             data: {
                 data:data
             }
