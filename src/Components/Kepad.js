@@ -27,7 +27,7 @@ export class Kepad extends Component {
             <button className="key" onClick={this.pressButton} name="9" data-number="9">9 <small>wxyz</small></button>
             </p>
             <p>
-            <button className="key" onClick={this.pressButton} name=" 0" data-number="0">0 </button>
+            <button className="key" onClick={this.pressButton} name="0" data-number="0">0 </button>
             </p>
       </div>
     )
