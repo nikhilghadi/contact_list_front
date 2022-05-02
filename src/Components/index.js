@@ -30,6 +30,7 @@ export class index extends Component {
       this.setState({input_text:e.target.value},this.search_contact)      
     }
 
+    
     search_contact=()=>{
 
       if(this.state.input_text){
@@ -64,6 +65,7 @@ export class index extends Component {
     }
     setValue=(value)=>{
       const {input_text} = this.state
+      console.log("pressbutton setting value",value)
       if(value === '#')
       {
         let position = this.ref.selectionStart
@@ -116,7 +118,7 @@ export class index extends Component {
           create_new_constact && !show_form ?
             <div style={{display:'flex',marginBottom:9,cursor:'pointer'}} onClick={this.addNewContact}>
               <div className='addToContact'>
-              <span class="material-icons">contact_phone</span>
+              <span className="material-icons">contact_phone</span>
               </div>
                 <div style={{marginLeft:20}} >Add to Contacts <span style={{textDecoration:'underline',color:'blue'}}>{input_text}</span></div>
               </div>
